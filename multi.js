@@ -102,8 +102,10 @@ function updateMapsSize(value) {
 
 function updateMapSize(map_info) {
     //var div = $("#mapbox_" + map_info.id);
-    var div = $(".map, .city-info");
-    div.css("width", map_size);
-    div.css("height", map_size);
+    $(".map")
+        .css("width", map_size)
+        .css("height", map_size);
     map_info.map.resize();
+    $(".city-info")
+        .css("width", map_size);
 }
