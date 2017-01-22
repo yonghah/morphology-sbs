@@ -5,9 +5,6 @@ var maps = [];
 var current_id = 0;
 var current_zoom = 12;
 var map_size = 400;
-//map_ids.map(addMap);
-//addCity(maps[0]);
-//addCity(maps[1]);
 
 function addCity(query){
     var map_id = current_id;
@@ -31,7 +28,6 @@ function createMap(map_id){
         minZoom: 3,
         zoom: current_zoom
     });
-    //map.addControl(new mapboxgl.NavigationControl());
     map.on("zoomend", function(){
         current_zoom = map.getZoom();
         maps.map(
@@ -39,6 +35,7 @@ function createMap(map_id){
                 m.map.setZoom(current_zoom)
             }
         );
+        updateZoomSlider(current_zoom);
     });    
     return map;
 }
@@ -88,6 +85,12 @@ function zoomUpdate(value) {
         }
     );
     $("#globalZoomOutput").html(value);
+}
+
+function updateZoomSlider(value){
+    var round_val = Math.round(value * 100) / 100
+    $("#globalZoom").val(round_val);
+    $("#globalZoomOutput").html(round_val);
 }
 
 function updateMapsSize(value) {
