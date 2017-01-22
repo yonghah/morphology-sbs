@@ -4,7 +4,7 @@ by Yongha Hwang
 
 See the demo:
 
-http://www-personal.umich.edu/~yonghah/morpholgy-sbs/
+http://www-personal.umich.edu/~yonghah/morphology-sbs/
 
 This web page provides morphological comparison acrss world cities in a easy
 way. The scale across maps are kept always same. You can change scale by using
