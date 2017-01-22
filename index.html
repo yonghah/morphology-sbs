@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.30.0/mapbox-gl.js'></script>
+    <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous">
+    </script>
+    <link href='multi.css' type="text/css" rel='stylesheet'/>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.30.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"></head>
+<body>
+<div id='header'>
+    <h1 class='text-center'> Urban Morphology Side-by-Side </h1 >
+    <p class='text-center'> <i>scale across maps are always kept same</i>
+    </p>
+</div>
+<div id='control' class='container'>
+    <div class='row'>
+        <div class='col-sm-3'>
+            <div id='zoomControl' class='form-group form-inline'>
+                <label for="golbalZoom" class='control-label'>zoom</label>
+                <input class='form-control' type="range" min="0" max="20" value="12"
+                    id="globalZoom"  step="0.1" oninput="zoomUpdate(value)">
+                <label for="globalZoom" id="globalZoomOutput">12</label>
+            </div>
+        </div>
+        <div id='search_div' class='col-sm-6'>
+            <div class='input-group input-group-lg'>
+                <input class='form-control', type='text' id='main_search'
+                placeholder="City, Coutry. e.g. Seoul, Korea"> 
+                </input> 
+                <span class='input-group-btn'>
+                    <button class='btn btn-primary'
+                        id='search_button'
+                        onclick='addCityClick();'>
+                        add city
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class='col-sm-3'>
+            <div id='mapSizeControl' class='form-group form-inline'>
+                <label for="mapSize" class='control-label'>map size</label>
+                <input class='form-control' type="range" min="100" max="1000" value="400"
+                    id="mapSize"  step="10" oninput="updateMapsSize(value)">
+                <label for="mapSize" id="mapSizeOutput">400</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id='container'></div>
+<script src='multi.js'></script>
+</body>
+</html>
