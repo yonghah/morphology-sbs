@@ -67,6 +67,7 @@ function addInfo(map_info) {
     $("#container_" + map_info.id).append(
         $('<h5>')
         .addClass("text-center")
+        .addClass("city-info")
         .html(map_info.display_name)
         .append($('<button>', {'class':'btn btn-default btn-xs'})
             .html('x')
@@ -100,7 +101,8 @@ function updateMapsSize(value) {
 }
 
 function updateMapSize(map_info) {
-    var div = $("#mapbox_" + map_info.id);
+    //var div = $("#mapbox_" + map_info.id);
+    var div = $(".map, .city-info");
     div.css("width", map_size);
     div.css("height", map_size);
     map_info.map.resize();
