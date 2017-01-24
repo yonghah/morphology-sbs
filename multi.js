@@ -6,8 +6,8 @@ var current_id = 0;
 var current_zoom = 12;
 var map_size = 400;
 
-addCity("Osaka, Japan");
-addCity("Berlin, Germany");
+addCity("Seoul, Korea");
+addCity("Ann Arbor, USA");
 
 function addCity(query){
     var map_id = current_id;
