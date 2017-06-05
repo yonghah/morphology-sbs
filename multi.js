@@ -6,8 +6,9 @@ var current_id = 0;
 var current_zoom = 12;
 var map_size = 400;
 
+addCity("Detroit, USA");
 addCity("Seoul, Korea");
-addCity("Ann Arbor, USA");
+addCity("Paris, France");
 
 function addCity(query){
     var map_id = current_id;
@@ -27,7 +28,7 @@ function createMap(map_id){
     var map = new mapboxgl.Map({
         container: "mapbox_" + map_id,
         style: 'mapbox://styles/ahgnoy/cixpb7f3q001x2sojafk0x4af',
-        center: [127.03, 37.5],
+        center: [-83.74, 42.28],
         minZoom: 3,
         zoom: current_zoom
     });
