@@ -52,7 +52,7 @@ function addCityClick(){
 
 
 function addr_search(map_info, query) {
-    $.getJSON('http://nominatim.openstreetmap.org/search?format=json&limit=5&q=' + query, function(data) {
+    $.getJSON('https://nominatim.openstreetmap.org/search?format=json&limit=5&q=' + query, function(data) {
         console.log(data[0]);
         if (data[0]) {
             map_info.display_name = data[0].display_name;
