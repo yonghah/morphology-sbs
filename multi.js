@@ -8,7 +8,7 @@ var map_size = 400;
 
 addCity("Detroit, USA");
 addCity("Seoul, Korea");
-addCity("Paris, France");
+addCity("London, UK");
 
 function addCity(query){
     var map_id = current_id;
@@ -52,7 +52,7 @@ function addCityClick(){
 
 
 function addr_search(map_info, query) {
-    $.getJSON('https://nominatim.openstreetmap.org/search?format=json&limit=5&q=' + query, function(data) {
+    $.getJSON('https://nominatim.openstreetmap.org/search?format=json&accept-language=en&limit=5&q=' + query, function(data) {
         console.log(data[0]);
         if (data[0]) {
             map_info.display_name = data[0].display_name;
