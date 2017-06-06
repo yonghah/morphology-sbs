@@ -2,9 +2,9 @@
 
 by Yongha Hwang
 
-This web page provides morphological comparison acrss world cities in a easy
-way. The scale across maps is kept always same. You can change scale by using
-the zoom slider at the top left corder or wheel scrolling in the map.
+This web page provides morphological comparison across world cities in an easy
+way. The scale across maps is kept always the same. You can change the scale by using
+the zoom slider at the top left corner or wheel-scroll on the map.
 
 ![screen shot](https://cloud.githubusercontent.com/assets/3218468/26832154/9046b42c-4a9c-11e7-8bfb-e5327a04e760.png)
 
